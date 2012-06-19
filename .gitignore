@@ -72,3 +72,6 @@ db/*.sqlite3
 
 # RubyMine project files
 /.idea
+
+# we don't want to copy over jetty stuff
+/work
