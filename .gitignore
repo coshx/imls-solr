@@ -76,3 +76,5 @@ db/*.sqlite3
 # we don't want to copy over jetty stuff
 /work
 /solr/data
+data/
+dataimport.properties
