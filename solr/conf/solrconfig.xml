@@ -82,8 +82,11 @@
   <lib dir="../../dist/" regex="apache-solr-clustering-\d.*\.jar" />
   <lib dir="../../contrib/clustering/lib/" regex=".*\.jar" />
 
+  <!--
   <lib dir="../../dist/" regex="apache-solr-dataimporthandler-\d.*\.jar" />
   <lib dir="../../contrib/dataimporthandler/lib/" regex=".*\.jar" />
+    -->
+  <lib dir="/lib" regex="apache-solr-dataimporthandler-\d.*\.jar" />
   
   <lib dir="../../dist/" regex="apache-solr-langid-\d.*\.jar" />
   <lib dir="../../contrib/langid/lib/" regex=".*\.jar" />
