@@ -26,7 +26,7 @@
   </requestHandler>
 
   <admin>
-    <defaultQuery>solr</defaultQuery>
+    <defaultQuery>*:*</defaultQuery>
   </admin>
 
 </config>

@@ -6,8 +6,7 @@
                 processor="XPathEntityProcessor"
                 stream="true"
                 forEach="/Repository/ListRecords/record"
-                url="/Users/ant/Source/imls-solr/data/mhsoai_adams1.xml"
-                transformer="RegexTransformer,DateFormatTransformer">
+                url="/Users/ant/Source/imls-solr/data/masshist/mhsoai_adams1.xml">
             <!-- dublin core -->
             <field column="title"           xpath="/Repository/ListRecords/record/metadata/dc/title" />
             <field column="creator"         xpath="/Repository/ListRecords/record/metadata/dc/creator" />
