@@ -1,4 +1,3 @@
-require 'bundler/capistrano'
 require 'capistrano_colors'
 
 set :repository,  "git@github.com:coshx/imls-solr.git"
@@ -21,11 +20,21 @@ set :domain, "128.143.8.227"
 role :app, domain
 
 namespace :deploy do
-  task :start do ; end
-  task :stop do ; end
-  task :finalize_update do ; end
-  
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "#{try_sudo} /etc/init.d/jetty restart"
+  desc "Restart IMLS Solr"
+  task :restart do
+    run "#{try_sudo} /etc/init.d/imls_solr restart"
   end
+  
+  desc "Start IMLS Solr"
+  task :start do
+    run "#{try_sudo} /etc/init.d/imls_solr start"
+  end
+  
+  desc "Stop IMLS Solr"
+  task :stop do
+    run "#{try_sudo} /etc/init.d/imls_solr stop"
+  end
+
+  desc "Override finalize_update as it's just tooo railsy..."
+  task :finalize_update do ; end
 end
