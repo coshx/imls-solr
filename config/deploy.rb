@@ -19,3 +19,13 @@ set :deploy_via, :remote_cache
 set :domain, "128.143.8.227"
 
 role :app, domain
+
+namespace :deploy do
+  task :start do ; end
+  task :stop do ; end
+  task :finalize_update do ; end
+  
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "#{try_sudo} /etc/init.d/jetty restart"
+  end
+end

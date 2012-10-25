@@ -1,4 +1,6 @@
 source "https://rubygems.org"
 
-gem "capistrano"
-gem "capistrano_colors"
+group :development do
+  gem "capistrano"
+  gem "capistrano_colors"
+end
